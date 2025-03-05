@@ -1,0 +1,162 @@
+/* Login Page Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  padding: 20px;
+}
+
+/* Login Card with Glassmorphism Effect */
+.login-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 380px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Heading */
+.login-card h2 {
+  color: #f5f5f5; /* Softer off-white */
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.login-card p {
+  color: #c5d1ff; /* Light muted blue */
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.form-group {
+  text-align: left;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* Labels */
+.form-group label {
+  color: #d1d9ff; /* Softer blue */
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* Input Fields with Subtle Border */
+.form-group input {
+  width: 100%;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e0e4ff; /* Soft light color */
+  outline: none;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #a3b4ff;
+  box-shadow: 0 0 8px rgba(163, 180, 255, 0.5);
+}
+
+/* Icons inside input fields */
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #b5c7ff;
+  font-size: 1.2rem;
+}
+
+/* Password Toggle */
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #b5c7ff;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.password-toggle:hover {
+  color: #d1d9ff;
+}
+
+/* Remember Me */
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.remember-me label {
+  font-size: 0.9rem;
+  color: #d1d9ff;
+  font-weight: bold;
+}
+
+/* 3D Effect Login Button */
+.login-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #3c5eff, #2a4ddf);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #2a4ddf, #3c5eff);
+}
+
+.login-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Register Link */
+.register-link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #d1d9ff;
+}
+
+.register-link a {
+  color: #a3b4ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-card {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .login-card h2 {
+    font-size: 1.5rem;
+  }
+}

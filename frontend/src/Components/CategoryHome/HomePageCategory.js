@@ -14,8 +14,6 @@ const HomePageCategory = () => {
         <div className="category-item">📏 Geometry & Measuring Tools</div>
         <div className="category-item">📁 Files & Organizers</div>
         <div className="category-item">✂️ Cutting & Adhesives</div>
-        <div className="category-item">🖍️ Coloring & Markers</div>
-        <div className="category-item">📜 Papers & Printing</div>
       </div>
     </section>
   );
