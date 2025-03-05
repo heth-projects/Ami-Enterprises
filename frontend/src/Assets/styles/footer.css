@@ -1,0 +1,51 @@
+.footer {
+  background: linear-gradient(135deg, #333, #555);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Text */
+.footer p {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Footer Links */
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: #f4a261; /* Warm orange-gold for contrast */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.footer-links a:hover {
+  color: #e76f51; /* A richer orange-red on hover */
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .footer {
+    font-size: 0.9rem;
+    padding: 15px 0;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

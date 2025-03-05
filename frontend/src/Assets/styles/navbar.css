@@ -1,65 +1,172 @@
+/* Navbar Container */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background-color: #0064c8;
-    color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b); /* Darker theme */
+  padding: 15px 40px;
+  width: 100%;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.navbar-logo h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #facc15; /* Gold for contrast */
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation Links - Centered */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-links li {
+  font-size: 1.1rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+  color: #facc15; /* Gold hover effect */
+  transform: scale(1.05);
+}
+
+/* Login Button & Cart */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+  position: relative;
+}
+
+/* Login Button */
+.login-button {
+  background: linear-gradient(135deg, #facc15, #eab308);
+  color: #1e3a8a;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-button:hover {
+  background: linear-gradient(135deg, #eab308, #facc15);
+  transform: scale(1.05);
+  color: white;
+}
+
+/* Cart Icon */
+.cart-icon {
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cart-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon:hover {
+  color: #facc15;
+  transform: scale(1.2);
+}
+
+/* Hamburger Menu (for mobile) */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 20px;
   }
-  
-  .navbar-logo img {
-    width: 150px;
-    height: 100px;
+
+  /* Show hamburger for smaller screens */
+  .hamburger {
+    display: block;
+    margin-right: 10px;
   }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 50px;
-  }
-  
-  .navbar-links li {
-    display: inline;
-  }
-  
-  .navbar-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: color 0.3s;
-  }
-  
-  .navbar-links a:hover {
-    color: #ffcc00;
-  }
-  
+
+  /* Adjust navbar actions */
   .navbar-actions {
     display: flex;
     align-items: center;
-    gap: 45px;
-    margin-right: 50px;
+    gap: 15px;
+    position: relative;
   }
-  
-  .login-button {
-    text-decoration: none;
-    color: white;
-    background-color: #ff6600;
-    padding: 8px 15px;
-    border-radius: 5px;
-    transition: background 0.3s;
+
+  /* Ensure the hamburger is to the LEFT of the Login button */
+  .navbar-actions .login-button {
+    order: 1;
   }
-  
-  .login-button:hover {
-    background-color: #cc5500;
+
+  .navbar-actions .cart-icon-container {
+    order: 2;
   }
-  
-  .cart-icon {
-    font-size: 24px;
-    color: white;
-    transition: color 0.3s;
+
+  .navbar-actions .ham {
+    order: 3;
   }
-  
-  .cart-icon:hover {
-    color: #ffcc00;
+
+  /* Center menu when it opens */
+  .navbar-links {
+    position: fixed;
+    top: 17%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    background: rgba(15, 23, 42, 0.95);
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
   }
-  
+
+  /* Show navigation when open */
+  .navbar-links.open {
+    display: flex;
+    opacity: 1;
+  }
+}
