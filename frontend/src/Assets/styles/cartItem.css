@@ -32,9 +32,11 @@
   font-size: 1.2rem;
   margin: 5px 0;
   color: #1e3a8a;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal; /* Allow wrapping */
+  overflow-wrap: break-word; /* Break long words */
+  word-wrap: break-word; /* Ensure breaking on all browsers */
+  text-overflow: ellipsis; /* Optional: for trimmed overflow */
+  max-width: 100%; /* Prevent it from exceeding container width */
 }
 
 .cart-item-details p {
@@ -99,6 +101,7 @@
   .cart-item {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px;
   }
 
   .cart-item img {
@@ -113,11 +116,19 @@
     text-align: left;
   }
 
+  /* Fix the controls positioning */
   .cart-item-controls {
-    position: static;
+    position: relative; /* Change from absolute to relative */
     margin-top: 10px;
     width: 100%;
     justify-content: space-between;
     transform: none;
+    gap: 5px;
+  }
+
+  /* Ensure remove button stays inside */
+  .cart-item-controls button.remove-btn {
+    font-size: 1rem; /* Slightly reduce icon size */
+    margin-left: 0;
   }
 }
