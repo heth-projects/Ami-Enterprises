@@ -1,0 +1,113 @@
+/* Product Card Container */
+.product-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 270px; /* Ensuring uniform width */
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid #1e40af; /* Blue border for consistency */
+}
+
+/* Hover Effect */
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.product-card img {
+  width: 100%;
+  height: 190px; /* Fixed height for consistency */
+  object-fit: cover;
+  border-radius: 8px;
+  border-bottom: 2px solid #2563eb;
+}
+
+/* Product Info */
+.product-info {
+  padding: 12px 0;
+  flex-grow: 1;
+}
+
+/* Product Title */
+.product-info h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1e3a8a; /* Dark Blue */
+  margin: 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Price */
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 5px 0;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+/* Button Styles */
+.buttons button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  width: 120px;
+  font-weight: 600;
+}
+
+.buttons button:hover {
+  background: #1e40af;
+  transform: scale(1.05);
+}
+
+/* View Details Button */
+.buttons button:last-child {
+  background: #ffbf00;
+  color: #333;
+}
+
+.buttons button:last-child:hover {
+  background: #ff9900;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-card {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .product-card img {
+    height: 160px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+}

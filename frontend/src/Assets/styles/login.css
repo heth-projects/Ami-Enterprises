@@ -1,97 +1,112 @@
-/* Login Page Container */
+/* Login Container (no background color applied here) */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  min-height: 89vh;
   padding: 20px;
+  /* No background color so the page background remains unchanged */
 }
 
-/* Login Card with Glassmorphism Effect */
+/* Login Card */
 .login-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  padding: 40px;
+  background: rgb(143, 211, 248);
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  text-align: center;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   width: 380px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-/* Heading */
+/* Headings */
 .login-card h2 {
-  color: #f5f5f5; /* Softer off-white */
-  font-size: 1.8rem;
-  font-weight: bold;
+  color: #333;
+  font-size: 2rem;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .login-card p {
-  color: #c5d1ff; /* Light muted blue */
+  color: #666;
   font-size: 1rem;
   margin-bottom: 20px;
 }
 
-/* Form Styling */
+/* Form Group */
 .form-group {
+  margin-bottom: 20px;
   text-align: left;
-  margin-bottom: 15px;
-  position: relative;
-}
-
-/* Labels */
-.form-group label {
-  color: #d1d9ff; /* Softer blue */
-  font-size: 0.9rem;
-  font-weight: bold;
-}
-
-/* Input Fields with Subtle Border */
-.form-group input {
   width: 100%;
-  padding: 12px 40px;
-  border: none;
+  box-sizing: border-box;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Input Fields */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
-  margin-top: 5px;
-  background: rgba(255, 255, 255, 0.08);
-  color: #e0e4ff; /* Soft light color */
+  background: #f9f9f9;
+  color: #333;
   outline: none;
-  border: 2px solid transparent;
-  transition: 0.3s;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
-.form-group input:focus {
-  border-color: #a3b4ff;
-  box-shadow: 0 0 8px rgba(163, 180, 255, 0.5);
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #999;
 }
 
-/* Icons inside input fields */
-.input-icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  color: #b5c7ff;
-  font-size: 1.2rem;
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
 }
 
-/* Password Toggle */
+/* Password Group */
+.password-group {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.password-wrapper {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 50px; /* Space for the toggle icon */
+  box-sizing: border-box;
+}
+
+/* Password Toggle Icon */
 .password-toggle {
   position: absolute;
   top: 50%;
-  right: 10px;
+  right: 16px;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #b5c7ff;
-  font-size: 1.3rem;
-  transition: color 0.3s;
+  color: #666;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
 .password-toggle:hover {
-  color: #d1d9ff;
+  color: #333;
 }
 
 /* Remember Me */
@@ -99,48 +114,44 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .remember-me label {
   font-size: 0.9rem;
-  color: #d1d9ff;
-  font-weight: bold;
+  font-weight: 600;
+  color: #333;
 }
 
-/* 3D Effect Login Button */
+/* Login Button */
 .login-btn {
   width: 100%;
-  background: linear-gradient(135deg, #3c5eff, #2a4ddf);
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
   color: white;
   border: none;
-  padding: 12px;
+  padding: 14px;
   border-radius: 25px;
   font-size: 1rem;
   cursor: pointer;
   font-weight: bold;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-sizing: border-box;
 }
 
 .login-btn:hover {
-  background: linear-gradient(135deg, #2a4ddf, #3c5eff);
-}
-
-.login-btn:active {
-  transform: translateY(3px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  transform: scale(1.05);
 }
 
 /* Register Link */
 .register-link {
   margin-top: 15px;
   font-size: 0.9rem;
-  color: #d1d9ff;
+  color: #333;
 }
 
 .register-link a {
-  color: #a3b4ff;
+  color: #2563eb;
   font-weight: bold;
   text-decoration: none;
 }
@@ -157,6 +168,6 @@
   }
 
   .login-card h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }

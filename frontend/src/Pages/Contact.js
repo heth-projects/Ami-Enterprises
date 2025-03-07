@@ -15,20 +15,20 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="contact-form">
             <form>
-              <div className="form-group">
-                <label>Name</label>
+              <div className="form-group-contact">
+                <label className="label-name-contact">Name</label>
                 <input type="text" placeholder="Enter your name" required />
               </div>
-              <div className="form-group">
-                <label>Email</label>
+              <div className="form-group-contact">
+                <label className="label-name-contact">Email</label>
                 <input type="email" placeholder="Enter your email" required />
               </div>
-              <div className="form-group">
-                <label>Subject</label>
+              <div className="form-group-contact">
+                <label className="label-name-contact">Subject</label>
                 <input type="text" placeholder="Enter subject" required />
               </div>
-              <div className="form-group">
-                <label>Message</label>
+              <div className="form-group-contact">
+                <label className="label-name-contact">Message</label>
                 <textarea
                   placeholder="Write your message"
                   rows="4"

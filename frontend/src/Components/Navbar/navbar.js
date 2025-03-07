@@ -1,27 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "../../Assets/styles/navbar.css";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi"; // Importing hamburger icon
+import { GiHamburgerMenu } from "react-icons/gi";
+import { CartContext } from "../../Context/CartContext";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const { cartCount } = useContext(CartContext);
+
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
   return (
     <nav className="navbar">
-      {/* Logo */}
       <div className="navbar-logo">
         <h1>
           <Link to="/">Ami Enterprises</Link>
         </h1>
       </div>
-
-      {/* Hamburger Menu (for mobile) */}
       <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
         <GiHamburgerMenu />
       </div>
-
-      {/* Navigation Links */}
       <ul className={`navbar-links ${menuOpen ? "open" : ""}`}>
         <li>
           <Link to="/" onClick={() => setMenuOpen(false)}>
@@ -44,14 +46,20 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-
-      {/* Actions: Login & Cart */}
       <div className="navbar-actions">
+        <input
+          type="text"
+          className={`search-bar ${menuOpen ? "show" : ""}`}
+          placeholder="Search products..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
         <Link to="/login" className="login-button">
           Login
         </Link>
         <Link to="/cart" className="cart-icon">
           <FaShoppingCart />
+          <span className="cart-count">{cartCount}</span>
         </Link>
       </div>
     </nav>

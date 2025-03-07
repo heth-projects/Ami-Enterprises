@@ -6,20 +6,23 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Product from "./Pages/Product";
 import Login from "./Components/Login";
+import { CartProvider } from "./Context/CartContext";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" Component={Home} />
-        <Route path="/about" Component={About} />
-        <Route path="/contact" Component={Contact} />
-        <Route path="/products" Component={Product} />
-        <Route path="/login" Component={Login} />
-      </Routes>
-    </Router>
+    <CartProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" Component={Home} />
+          <Route path="/about" Component={About} />
+          <Route path="/contact" Component={Contact} />
+          <Route path="/products" Component={Product} />
+          <Route path="/login" Component={Login} />
+        </Routes>
+      </Router>
+    </CartProvider>
   );
 }
 
