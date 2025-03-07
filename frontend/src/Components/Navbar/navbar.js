@@ -59,7 +59,7 @@ const Navbar = () => {
         </Link>
         <Link to="/cart" className="cart-icon">
           <FaShoppingCart />
-          <span className="cart-count">{cartCount}</span>
+          <span className="cart-count-navbar">{cartCount}</span>
         </Link>
       </div>
     </nav>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import productsData from "../Utils/productData";
 import Filter from "../Utils/filter";
-import ProductCard from "../Components/ProductCardHome/ProductCard";
+import ProductCard from "../Components/ProductCard/ProductCard";
 import "../Assets/styles/product.css";
 import Footer from "../Components/Footer/Footer";
 

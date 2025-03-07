@@ -10,8 +10,7 @@ const ProductCard = ({ product }) => {
       <img src={product.image} alt={product.name} />
       <div className="product-info">
         <h3>{product.name}</h3>
-        {/* <p>{product.description}</p> */}
-        <p className="price">₹{product.price}</p>
+        <p className="price">₹{product.price.toFixed(2)}</p>
         <div className="buttons">
           <button onClick={() => addToCart(product)}>Add to Cart</button>
           <button>View Details</button>

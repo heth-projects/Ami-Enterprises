@@ -62,16 +62,16 @@ const Contact = () => {
           {/* Social Media Links */}
           <div className="social-links">
             <h3>Follow Us</h3>
-            <a href="#">
+            <a href="https://www.facebook.com">
               <i className="fab fa-facebook"></i>
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#">
+            <a href="https://www.twitter.com">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#">
+            <a href="https://linkedin.com">
               <i className="fab fa-linkedin"></i>
             </a>
           </div>

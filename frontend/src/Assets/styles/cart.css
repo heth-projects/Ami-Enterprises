@@ -1,0 +1,78 @@
+/* Cart Page Container */
+.cart-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Main Heading */
+.cart-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #1e3a8a; /* Dark blue */
+}
+
+/* Cart Items Container */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Cart Summary Section */
+.cart-summary {
+  background: #e6f0ff; /* Light blue background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Summary Heading */
+.cart-summary h2 {
+  font-size: 1.8rem;
+  color: #1e3a8a;
+  margin-bottom: 20px;
+}
+
+/* Clear Cart Button */
+.cart-summary button {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-right: 10px;
+}
+
+.cart-summary button:hover {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-page {
+    padding: 20px;
+  }
+
+  .cart-page h1 {
+    font-size: 2rem;
+  }
+
+  .cart-summary h2 {
+    font-size: 1.5rem;
+  }
+
+  .cart-summary button {
+    width: 100%;
+  }
+}

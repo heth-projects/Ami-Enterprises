@@ -1,7 +1,7 @@
 import React from "react";
 import HeroSection from "../Components/HeroSection/HeroSection.js";
 import CategorySection from "../Components/CategoryHome/HomePageCategory.js";
-import ProductCard from "../Components/ProductCardHome/ProductCardHome.js";
+import ProductCard from "../Components/ProductCard/ProductCardHome.js";
 import Footer from "../Components/Footer/Footer.js";
 import "../Assets/styles/homePage.css";
 

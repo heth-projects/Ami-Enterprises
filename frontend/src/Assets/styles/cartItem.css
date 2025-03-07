@@ -1,0 +1,123 @@
+/* Cart Item Container */
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Product Image (Left) */
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+/* Cart Item Details (Center) */
+.cart-item-details {
+  flex: 1;
+  padding: 0 15px;
+  text-align: center;
+  position: relative;
+  padding-right: 140px; /* Space for controls */
+}
+
+.cart-item-details h3 {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #1e3a8a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cart-item-details p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin: 5px 0;
+}
+
+/* Cart Item Controls (Right) */
+.cart-item-controls {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* General Button Styles for Controls */
+.cart-item-controls button {
+  background: linear-gradient(135deg, #2563eb, #1e3a8a);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.cart-item-controls button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+}
+
+/* Quantity Display */
+.cart-item-controls span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Remove (Dustbin) Button - Override General Button Styles */
+.cart-item-controls button.remove-btn {
+  background: transparent;
+  border: none;
+  color: #dc2626; /* Red color for remove */
+  font-size: 1.2rem;
+  padding: 0;
+  margin-left: 5px;
+  transition: transform 0.2s ease;
+}
+
+.cart-item-controls button.remove-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .cart-item-details {
+    width: 100%;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .cart-item-controls {
+    position: static;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+    transform: none;
+  }
+}

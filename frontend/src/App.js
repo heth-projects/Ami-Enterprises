@@ -6,6 +6,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Product from "./Pages/Product";
 import Login from "./Components/Login";
+import Cart from "./Components/Cart/Cart.js";
 import { CartProvider } from "./Context/CartContext";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contact" Component={Contact} />
           <Route path="/products" Component={Product} />
           <Route path="/login" Component={Login} />
+          <Route path="/cart" Component={Cart} />
         </Routes>
       </Router>
     </CartProvider>
