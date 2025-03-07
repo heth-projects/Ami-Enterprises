@@ -7,12 +7,12 @@ import { CartContext } from "../../Context/CartContext";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  // const [searchTerm, setSearchTerm] = useState("");
   const { cartCount } = useContext(CartContext);
 
-  const handleSearchChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
+  // const handleSearchChange = (e) => {
+  //   setSearchTerm(e.target.value);
+  // };
 
   return (
     <nav className="navbar">
@@ -47,13 +47,6 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="navbar-actions">
-        <input
-          type="text"
-          className={`search-bar ${menuOpen ? "show" : ""}`}
-          placeholder="Search products..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
         <Link to="/login" className="login-button">
           Login
         </Link>
